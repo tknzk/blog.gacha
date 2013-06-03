@@ -6,8 +6,6 @@ get '/' do
 end
 
 get '/lotte' do
-  ary    = [3,8,11,14,18]
-  author = ary[rand(ary.length)]
-  erb :lotte, :locals => {:author => author}
+  authors = [3, 8, 11, 14, 18]
+  erb :lotte, :locals => {:author => authors.sample }
 end
-
